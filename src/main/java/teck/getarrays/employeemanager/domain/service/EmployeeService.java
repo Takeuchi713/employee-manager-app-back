@@ -35,6 +35,10 @@ public class EmployeeService {
 	}
 
 	public Employee findEmployeeById(Long id) {
+//			Employee employee = employeeRepository.findEmployeeById(id);
+//			System.out.println(employee);
+//			return employee;
+		//上だとnullになるかよくわからないから、基本的にはoptionalを使う。
 		return employeeRepository.findEmployeeById(id)
 				.orElseThrow(() -> new UserNotFoundException("User by id " + id + "was not found"));
 	}

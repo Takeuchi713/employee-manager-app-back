@@ -28,6 +28,12 @@ public class EmployeeResource {
 		this.employeeService = employeeService;
 	}
 
+	// for junit test
+	@GetMapping("/init")
+	public String init() {
+		return "hello world";
+	}
+
 	@GetMapping("/all")
 	public ResponseEntity<List<Employee>> getAllEmployeesEntity() {
 		List<Employee> employees = employeeService.findAllEmployees();

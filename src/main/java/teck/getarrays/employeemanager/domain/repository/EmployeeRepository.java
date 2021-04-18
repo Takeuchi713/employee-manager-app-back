@@ -12,4 +12,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
 	Optional<Employee> findEmployeeById(Long id);
 
+//	nullになるんだ。
+//	Employee findEmployeeById(Long id);
+
+
 }
